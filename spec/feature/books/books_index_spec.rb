@@ -7,12 +7,11 @@ RSpec.describe "As a user" do
         name:             "Phil DeLong"
       )
 
-      @book = Book.create(
+      @book = @phil_delong.books.create(
         title:            "The Book",
         pages:            100,
         publication_year: "2020",
       )
-      @phil_delong.books << @book
       visit "/books"
     end
     it "i see all books with title pages year authors" do
