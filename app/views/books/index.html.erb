@@ -5,6 +5,6 @@
 		<%= book.publication_year %>
 		<%= book.pages %>
 		<% book.author.each do |auth| %>
-			<%= link_to "#{auth.name}", "/authors/#{@author.id}" %>
+			<%= link_to "#{auth.name}", "/authors/#{auth.id}" %>
 			<% end %>
 	<% end %>

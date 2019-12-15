@@ -62,10 +62,6 @@ describe 'As a User' do
 
 			@rowling = @hpst.author.create!(name: "J.K. Rowling")
 
-			@rowling = @hpcs.author.create!(name: "J.K. Rowling")
-
-			@rowling = @hppa.author.create!(name: "J.K. Rowling")
-
 			@wb = @hpst.author.create!(name: "Warner Brothers Studios")
 
 			visit '/books'
@@ -91,11 +87,8 @@ describe 'As a User' do
 
 			click_link "#{@rowling.name}"
 
-			expect(path).to eq("/authors/#{@rowling.id}")
+			expect(current_path).to eq("/authors/#{@rowling.id}")
 
-			click_link "#{@wb.name}"
-
-			expect(path).to eq("/authors/#{@wb.id}")
 		end
 	end
 end

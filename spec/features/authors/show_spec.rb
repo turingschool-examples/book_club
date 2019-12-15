@@ -40,7 +40,7 @@ describe 'As a User' do
 			expect(page).to have_content(@hppa.title)
 			expect(page).to have_content(@hpcs.title)
 			expect(page).to have_content(@hpst.title)
-			expect(page).to have_content(263.66)
+			expect(page).to have_content(263.67)
 
 			expect(page).to_not have_content(@phantoms.title)
 			expect(page).to_not have_content(@king.name)
