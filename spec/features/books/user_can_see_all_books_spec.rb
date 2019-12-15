@@ -14,7 +14,7 @@ RSpec.describe "User can see all books", type: :feature do
                                     pages: 432,
                                     publication_year: 2015)
 
-    book_3 = author_2.books.create!(title: "The Girl with the Dragon Tattoo",
+    book_3 = author_2.books.create!(title: "The Girl With the Dragon Tattoo",
                                     pages: 463,
                                     publication_year: 2005)
 
@@ -22,7 +22,7 @@ RSpec.describe "User can see all books", type: :feature do
                                     pages: 631,
                                     publication_year: 2006)
 
-    book_5 = author_2.books.create!(title: "The Girl Who Kick the Hornet's Nest",
+    book_5 = author_2.books.create!(title: "The Girl Who Kicked the Hornet's Nest",
                                     pages: 602,
                                     publication_year: 2007)
 
