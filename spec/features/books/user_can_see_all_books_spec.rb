@@ -36,7 +36,6 @@ RSpec.describe "User can see all books", type: :feature do
         expect(page).to have_content(book.pages)
         expect(page).to have_content(book.publication_year)
         expect(page).to have_content(book.authors.name)
-
       end
     end
   end
