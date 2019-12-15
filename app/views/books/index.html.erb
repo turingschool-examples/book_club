@@ -1,0 +1,10 @@
+<h1>All Books</h1>
+
+	<% @books.each do |book| %>
+		<%= book.title %>
+		<%= book.publication_year %>
+		<%= book.pages %>
+		<% book.author.each do |auth| %>
+			<%= auth.name %>
+			<% end %>
+	<% end %>
