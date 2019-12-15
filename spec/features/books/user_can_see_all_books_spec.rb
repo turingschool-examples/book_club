@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "User can see all books" do
+RSpec.describe "User can see all books", type: :feature do
   it "can see all books" do
 
     author_1 = Author.create!(name: "Anthony Doerr")
@@ -25,18 +25,17 @@ RSpec.describe "User can see all books" do
     book_5 = author_2.books.create!(title: "The Girl Who Kick the Hornet's Nest",
                                     pages: 602,
                                     publication_year: 2007)
+
+    books_array = [book_1, book_2, book_3, book_4, book_5]
+
     visit "/books"
 
-    within "#book-#{book_1.id}" do
-      expect(page).to have_content("All the Light We Cannot See")
-      expect(page).to have_content(544)
-      expect(page).to have_content(2014)
-
-    within "#book-#{book_2.id}" do
-      expect(page).to have_content("The Nightingale")
-      expect(page).to have_content(608)
-      expect(page).to have_content(2017)
-    end
+    books_array.each do |book|
+      within "#book-#{book.id}" do
+        expect(page).to have_content(book.title)
+        expect(page).to have_content(book.pages)
+        expect(page).to have_content(book.publication_year)
+      end
     end
   end
 end
