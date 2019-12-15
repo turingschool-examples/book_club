@@ -8,7 +8,7 @@ describe Book, type: :model do
 	end
 
 	describe 'relationships' do
-		it {should have_many :authors}
-		it {should have_many :book_authors}
+		it {should have_many :author}
+		it {should have_many :book_author}
 	end
 end
