@@ -10,7 +10,7 @@ RSpec.describe "User can see all books" do
                                     pages: 544,
                                     publication_year: 2014)
 
-    book_2 = author_1.books.create (title: "About Grace",
+    book_2 = author_1.books.create!(title: "About Grace",
                                     pages: 432,
                                     publication_year: 2015)
 
