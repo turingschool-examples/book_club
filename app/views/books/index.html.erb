@@ -1,0 +1,14 @@
+<section class="pg-template-1">
+  <section id="books-content">
+    <% @books.each do |book| %>
+      <article id="book-<%= book.id %>" >
+        <h3><%= book.title %></h3>
+        <p><%= book.pages %></p>
+        <p><%= book.publication_year %></p>
+        <% book.authors.each do |author| %>
+          <%= link_to author.name, "/author/#{author.id}" %>
+        <% end %>
+      </article>
+    <% end %>
+  </section>
+</section>
