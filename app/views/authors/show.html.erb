@@ -1,0 +1,7 @@
+<section class="pg-template-1">
+    <h3><%= @author.name %></h3>
+    <% @author.books.each do |book| %>
+      <p><%= book.title %></p>
+    <% end %>
+    <p>Average Pages: <%= @average_pages %></p>
+</section>
